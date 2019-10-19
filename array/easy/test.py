@@ -6,3 +6,4 @@
 @file: test.py
 """
  
+print(25485)
