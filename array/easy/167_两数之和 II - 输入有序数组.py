@@ -43,7 +43,7 @@ class Solution(object):
         return []
 
 
-class Solution3(object):
+class Solution2(object):
     def twoSum(self, numbers, target):
         """
         :type numbers: List[int]
@@ -62,10 +62,25 @@ class Solution3(object):
 
         return []
 
+class Solution3(object):
+    def twoSum(self, numbers, target):
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        res = dict()
+        for index ,value in enumerate(numbers):
+            sub = target - value
+            if sub in res.keys():
+                return [res[sub] + 1, index + 1]
+            else:
+                res[value] = index
+        return []
 
 if __name__ == "__main__":
     nums = [2, 7, 11, 15]
-    target = 9
+    target = 18
     c = Solution3()
     re = c.twoSum(nums, target)
     print(re)
