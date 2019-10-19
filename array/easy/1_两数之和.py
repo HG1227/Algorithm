@@ -1,10 +1,12 @@
 #!/usr/bin/python
-#coding:utf-8
+# coding:utf-8
 
 """
 @software: PyCharm
 @file: 1_两数之和.py
 """
+
+
 class Solution:
     def twoSum(self, nums, target):
         """
@@ -12,7 +14,11 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
+        if len(nums) <= 1:
+            return False
+
         num_dict = dict()
+
         for index, value in enumerate(nums):
             sub = target - value
             if sub in num_dict.keys():
@@ -22,12 +28,10 @@ class Solution:
 
         return []
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     nums = [2, 7, 11, 15]
     target = 9
-    c=Solution()
-    re=c.twoSum(nums,target)
+    c = Solution()
+    re = c.twoSum(nums, target)
     print(re)
-
-
- 
