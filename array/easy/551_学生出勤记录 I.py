@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#coding:utf-8
+# coding:utf-8
 
 """
 @software: PyCharm
@@ -25,6 +25,8 @@
 输出: False
 
 '''
+
+
 class Solution(object):
     def checkRecord(self, s):
         """
@@ -35,12 +37,9 @@ class Solution(object):
         def checkRecord(self, s):
             return not (s.count('A') > 1 or 'LLL' in s)
 
-
-        #使用正则表达式 [Accepted]
-        #return !s.matches(".*(A.*A|LLL).*");
-
+        # 使用正则表达式 [Accepted]
+        # return !s.matches(".*(A.*A|LLL).*");
 
 
 if __name__ == "__main__":
     pass
- 
