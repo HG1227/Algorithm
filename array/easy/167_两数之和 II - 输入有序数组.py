@@ -25,7 +25,6 @@
 
 """字典"""
 
-
 class Solution(object):
     def twoSum(self, numbers, target):
         """
@@ -33,6 +32,7 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+
         res = dict()
         for i in range(0, len(numbers)):
             sub = target - numbers[i]
