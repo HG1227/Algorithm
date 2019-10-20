@@ -52,6 +52,10 @@ class Solution(object):
 
         return ans
 
+    def findRestaurant2(self, list1, list2):
+        d = {x: list1.index(x) + list2.index(x) for x in set(list1) & set(list2)}
+        return [x for x in d if d[x] == min(d.values())]
+
 
 if __name__ == "__main__":
     l1 = ["Shogun", "Tapioca Express", "Burger King", "KFC"]
@@ -59,4 +63,3 @@ if __name__ == "__main__":
     c = Solution()
     m = c.findRestaurant(l1, l2)
     print(m)
-
