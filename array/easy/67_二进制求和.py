@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#coding:utf-8
+# coding:utf-8
 
 """
 @software: PyCharm
@@ -20,7 +20,8 @@
 输入: a = "1010", b = "1011"
 输出: "10101"
 '''
- 
+
+
 class Solution(object):
     def addBinary(self, a, b):
         """
@@ -31,14 +32,14 @@ class Solution(object):
         return bin(int(a, 2) + int(b, 2))[2:]
 
     def addBinary2(self, a, b):
-        if a==b=="0":
+        if a == b == "0":
             return "0"
-        num1=num2=0
-        for i,x in enumerate(a):
-            num1+=int(x)*(2**(len(a)-i-1))
-        for i,x in enumerate(b):
-            num2+=int(x)*(2**(len(b)-i-1))
-        num=num1+num2
+        num1 = num2 = 0
+        for i, x in enumerate(a):
+            num1 += int(x) * (2 ** (len(a) - i - 1))
+        for i, x in enumerate(b):
+            num2 += int(x) * (2 ** (len(b) - i - 1))
+        num = num1 + num2
 
         return bin(num)[2:]
 
