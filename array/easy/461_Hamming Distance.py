@@ -32,10 +32,20 @@ class Solution(object):
         :type y: int
         :rtype: int
         """
+        #得到的t为整型的
         t=x^y
         count=0
         while t!=0:
             count=count+1
-            t=t&(t-1)
+            t=t&(t-1)  #(t-1)相当于把二进制右移一位
 
         return  count
+
+        # count2 = 0
+        # while n:
+        #     count2 += n & 1
+        #     n >>= 1
+        # return count2
+
+
+print(3^4)
