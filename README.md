@@ -10,3 +10,5 @@ leetcode_python
 [选择排序](https://github.com/HongGHu/leetcode_python/blob/master/sort/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.py)
 
 [希尔排序](https://github.com/HongGHu/leetcode_python/blob/master/sort/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.py)
+
+[快速排序](https://github.com/HongGHu/leetcode_python/blob/master/sort/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.py)
