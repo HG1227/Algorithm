@@ -15,37 +15,40 @@
 '''
 
 
-def mergeSort(alist):
+def merge_sort(alist):
     if len(alist) > 1:
         mid = len(alist) // 2
-        lefthalf = alist[:mid]
-        righthalf = alist[mid:]
+        left_half = alist[:mid]
+        righ_thalf = alist[mid:]
 
-        mergeSort(lefthalf)
-        mergeSort(righthalf)
+        merge_sort(left_half)
+        merge_sort(righ_thalf)
 
         i = 0
         j = 0
         k = 0
-        while i < len(lefthalf) and j < len(righthalf):
-            if lefthalf[i] < righthalf[j]:
-                alist[k] = lefthalf[i]
+        while i < len(left_half) and j < len(righ_thalf):
+            if left_half[i] < righ_thalf[j]:
+                alist[k] = left_half[i]
                 i += 1
             else:
-                alist[k] = righthalf[j]
+                alist[k] = righ_thalf[j]
                 j += 1
             k += 1
 
-        while i < len(lefthalf):
-            alist[k] = lefthalf[i]
+        # 如果左半边或者右半边有一个先到末尾，上面的循环就退出了
+        # 那么就把没有到末尾那半边的最后的元素添加到新的序列中，以免数值少算
+        while i < len(left_half):
+            alist[k] = righ_thalf[i]
             i += 1
             k += 1
-        while j < len(righthalf):
-            alist[k] = righthalf[j]
+
+        while j < len(left_half):
+            alist[k] = righ_thalf[j]
             j += 1
             k += 1
 
 
-alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-mergeSort(alist)
-print(alist)
+a_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+merge_sort(a_list)
+print(a_list)
