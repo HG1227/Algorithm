@@ -1,9 +1,8 @@
 #!/usr/bin/python
-#coding:utf-8
-#@software: PyCharm
-#@file: 快速排序.py
-#@time: 2019/11/29
-
+# coding:utf-8
+# @software: PyCharm
+# @file: 快速排序.py
+# @time: 2019/11/29
 
 
 """
@@ -27,6 +26,45 @@
 递归的最底部情形，是数列的大小是零或一，也就是永远都已经被排序好了。
 虽然一直递归下去，但是这个算法总会结束，因为在每次的迭代（iteration）中，
 它至少会把一个元素摆到它最后的位置去。
-————————————————
-
 """
+
+
+def quick_sort(alist, start, end):
+    """快速排序"""
+    if start >= end:
+        return
+
+    # 基准
+    mid = alist[start]
+
+    # 左边的游标
+    left = start
+    # 右边游标
+    right = end
+
+    while left < right:
+        while left < right and alist[right] >= mid:
+            # 右边的游标移动，左边的游标不动
+            right -= 1
+
+        alist[left] = alist[right]
+
+        while left < right and alist[left] < mid:
+            # 左边的游标移动，右边的游标不动
+            left += 1
+
+        alist[right] = alist[left]
+
+    # 退出循环后，left 与 right 重合，即相等
+    alist[left] = mid
+    # 递归的方式，排左边的序列
+    quick_sort(alist, start, left - 1)
+    # 递归方式排右边的序列
+    quick_sort(alist, left + 1, end)
+
+
+if __name__ == "__main__":
+    alist = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print(f"原列表为：{alist}")
+    quick_sort(alist, 0, len(alist) - 1)
+    print(f"新列表为：{alist}")
