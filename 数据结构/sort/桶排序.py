@@ -4,7 +4,7 @@
 # @file: 桶排序.py
 # @time: 2019/12/10
 
-
+# 首先定义插入排序法
 def insert_sort(nums, order=1):
     # 第一个数不动，从第二个数开始比较
     for i in range(1, len(nums)):
