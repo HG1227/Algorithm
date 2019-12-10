@@ -22,10 +22,10 @@ def countSort(nums, order=1):
     else:
         return result[::-1]
 
+
 test = [-2, 4, 6, 9, 0, 76, 21, 87, 65, 43, 32]
 print(countSort(test))
-print(countSort(test,2))
-
+print(countSort(test, 2))
 
 # https://blog.csdn.net/weixin_43216017/article/details/90299151
 # https://blog.csdn.net/wardseptember/article/details/81434641
