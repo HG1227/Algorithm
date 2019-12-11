@@ -1,7 +1,7 @@
 # leetcode_python
 leetcode_python
 
-[冒泡排序](https://github.com/HongGHu/leetcode_python/blob/master/sort/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.py)
+[冒泡排序](https://github.com/HG1227/Algorithm/blob/master/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/sort/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.py)
 
 [插入排序](https://github.com/HongGHu/leetcode_python/blob/master/sort/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.py)
 
