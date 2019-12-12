@@ -16,5 +16,4 @@ class Solution:
             carry = temp // 10
             res = str(temp % 10) + res
             i, j = i - 1, j - 1
-
         return '1' + res if carry else res
