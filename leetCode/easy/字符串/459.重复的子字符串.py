@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding:utf-8
 # @software: PyCharm
-# @file: 459.重复的子字符串.py
+# @file: 459.重的子字符串.py
 # @time: 2019/12/13
 
 class Solution:
