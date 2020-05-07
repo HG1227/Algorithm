@@ -36,7 +36,16 @@ class Solution:
 
 
 import collections
+"""
+先说一下这道题的意思，每次找三个点，第一个点和第二个点的欧氏距离等于第
+一个点和第三个点的欧氏距离，说明是回旋镖。
+思路如下：
+每次固定一个点，使用哈希表存储其他点到这个点的距离，如果存在记录次数，
+回旋镖的数量应为次数*（次数-1）
 
+
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+"""
 
 class Solution2:
     def numberOfBoomerangs(self, points: List[List[int]]) -> int:
